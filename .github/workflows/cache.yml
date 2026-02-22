@@ -1,0 +1,29 @@
+name: Cache Demo
+   on: [push]
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - name: prime-cache-1509241
+           id: cache
+           uses: actions/cache@v4
+           with:
+             path: ~/.cache
+             key: cache-1509241
+         - run: echo "Cache hit: ${{ steps.cache.outputs.cache-hit }}"
+```
+2. Commit and push — this triggers the workflow
+3. Go to **Actions** tab and verify it ran
+4. Paste the repo URL
+
+---
+
+## Q8: Configure Dependabot (1 mark)
+
+1. Create a new GitHub repo
+2. Add `requirements.txt`:
+```
+   fastapi
+   requests
+   pandas
