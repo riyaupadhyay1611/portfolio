@@ -1,14 +1,17 @@
 name: Cache Demo
-   on: [push]
-   jobs:
-     build:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v4
-         - name: prime-cache-1509241
-           id: cache
-           uses: actions/cache@v4
-           with:
-             path: ~/.cache
-             key: cache-1509241
-         - run: echo "Cache hit: ${{ steps.cache.outputs.cache-hit }}"
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: prime-cache-1509241
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache
+          key: cache-1509241
+          
+      - name: Check cache result
+        run: echo "Cache hit ${{ steps.cache.outputs.cache-hit }}"
