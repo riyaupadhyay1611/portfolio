@@ -141,16 +141,17 @@
       "rating": 4.1
     }
   ],
-  "aggregations": {
-  "clothing": {
-    "count": 2,
-    "inventoryValue": 71001.51
-  },
+"aggregations": {
   "electronics": {
     "count": 4,
     "inventoryValue": 145325.95
+  },
+  "clothing": {
+    "count": 2,
+    "inventoryValue": 71001.51
   }
 }
+
 
     }
   
