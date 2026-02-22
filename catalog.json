@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "email": "23f2005466@ds.study.iitm.ac.in",
+    "version": "b741a8da"
+  },
+  "products": [
+    // ← EXACTLY 17 products from the exam table
+  ],
+  "aggregations": {
+    "clothing": {
+      "count": 2,
+      "inventoryValue": 71001.51
+    }
+  }
+}
+
